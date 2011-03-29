@@ -1,0 +1,14 @@
+==============================  task_1.c  ==============================
+
+Implement a program that accepts as argument a "pathname", open the file
+and using a partition size of the file bytes of 80 bytes, create an 
+output file in which shall contain the following:
+
+Block 1
+// the first 80 Bytes
+Block 2
+// the next 80 Bytes
+
+==============================  task_2.c  ==============================
+
+==============================  task_3.c  ==============================
