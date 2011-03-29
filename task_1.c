@@ -16,9 +16,10 @@ Try following the execution of the program: $>cat file y $> od -c file
 int main(int argc, char *argv[]){
 	
 int fd,fd1;
+int i=0; // Contador de etiquetas
 char buf[80];
 char buffer[2000];// Entrada estandar
-	
+int hay_datos = 1;
 	
 	if (argc == 2){
 		if( (fd=open(argv[1],O_RDONLY,S_IRUSR))<0) {
@@ -51,6 +52,29 @@ char buffer[2000];// Entrada estandar
 		perror("\nError en open del fichero de salida.");
 		exit(-1);
 	}
-   
+
+	// Calculamos el numero de bloques que ocupa el fichero
+
+	int tam;
+	lseek(fd1,26,SEEK_SET);
+		while(hay_datos){
+
+			tam = read(fd,buffer,80);
+			if (tam == 0)
+				hay_datos=0;
+			else{
+				write(fd1,"\nBloque i:\n",11);
+				write(fd1,buffer,tam);
+				i++;
+			}
+		
+        }//while
+
+	lseek(fd1,0,SEEK_SET);
+	write(fd1,"El Numero de Bloques es n",26);			
+
+	close(fd);
+	close(fd1);
+
 return 0;
 }
