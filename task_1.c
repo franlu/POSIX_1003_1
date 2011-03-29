@@ -18,6 +18,7 @@ int main(int argc, char *argv[]){
 int fd,fd1;
 int i=0; // Contador de etiquetas
 char buf[80];
+char aux[27];
 char buffer[2000];// Entrada estandar
 int hay_datos = 1;
 	
@@ -56,23 +57,25 @@ int hay_datos = 1;
 	// Calculamos el numero de bloques que ocupa el fichero
 
 	int tam;
-	lseek(fd1,26,SEEK_SET);
+	lseek(fd1,27,SEEK_SET);
 		while(hay_datos){
 
 			tam = read(fd,buffer,80);
 			if (tam == 0)
 				hay_datos=0;
 			else{
-				write(fd1,"\nBloque i:\n",11);
+				sprintf(aux,"\nBloque %d:\n",i);
+				write(fd1,aux,12);
 				write(fd1,buffer,tam);
 				i++;
 			}
 		
         }//while
 
+	sprintf(aux,"El numero de bloques es %d",i);
 	lseek(fd1,0,SEEK_SET);
-	write(fd1,"El Numero de Bloques es n",26);			
-
+	write(fd1,aux,27);
+	
 	close(fd);
 	close(fd1);
 
