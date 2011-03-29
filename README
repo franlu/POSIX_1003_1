@@ -9,6 +9,19 @@ Block 1
 Block 2
 // the next 80 Bytes
 
-==============================  task_2.c  ==============================
+Failure to pass an argument to the program must use standard input as 
+input file.
+
+=============================  task_1_a.c  =============================
+
+Edit the file task_1.c so that once the writing in the output file and 
+before closing, we could indicate in its first line the number of labels
+"block i " had written that looks like this:
+
+The number of blocks is <number_blocks>
+Block 1
+// the first 80 bytes
+Block 2
+// the next 80 bytes
 
 ==============================  task_3.c  ==============================
