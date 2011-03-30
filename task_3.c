@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 int fd1,fd2;
 struct stat atributos;
 
-//CREACION DE ARCHIVOS
+//CREATE FILE
 if( (fd1=open("archivo1",O_CREAT|O_TRUNC|O_WRONLY,S_IRGRP|S_IWGRP|S_IXGRP))<0) {
 	printf("\nError %d en open(archivo1,...)",errno);
 	perror("\nError en open");
@@ -25,13 +25,14 @@ if( (fd1=open("archivo1",O_CREAT|O_TRUNC|O_WRONLY,S_IRGRP|S_IWGRP|S_IXGRP))<0) {
 }
 
 umask(0);
+
 if( (fd2=open("archivo2",O_CREAT|O_TRUNC|O_WRONLY,S_IRGRP|S_IWGRP|S_IXGRP))<0) {
 	printf("\nError %d en open(archivo2,...)",errno);
 	perror("\nError en open");
 	exit(-1);
 }
 
-//CAMBIO DE PERMISOS
+//CHANGE OF PERMISSIONS
 if(stat("archivo1",&atributos) < 0) {
 	printf("\nError al intentar acceder a los atributos de archivo1");
 	perror("\nError en lstat");
