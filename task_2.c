@@ -11,6 +11,10 @@ Working with system calls File System ''POSIX 2.10 compliant''
 #include<errno.h>
 #include<string.h>
 
+
+#define S_ISREG2(mode) ((mode & S_IFMT) == S_IFREG)
+
+
 int main(int argc, char *argv[])
 {
 int i;
@@ -28,7 +32,7 @@ for(i=1;i<argc;i++) {
 		perror("\nError en lstat");
 	}
 	else {
-		if(S_ISREG(atributos.st_mode)) strcpy(tipoArchivo,"Regular");
+		if(S_ISREG2(atributos.st_mode)) strcpy(tipoArchivo,"Regular");
 		else if(S_ISDIR(atributos.st_mode)) strcpy(tipoArchivo,"Directorio");
 		else if(S_ISCHR(atributos.st_mode)) strcpy(tipoArchivo,"Especial de caracteres");
 		else if(S_ISBLK(atributos.st_mode)) strcpy(tipoArchivo,"Especial de bloques");
