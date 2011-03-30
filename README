@@ -1,6 +1,8 @@
+========================================================================
 ==============================  task_1.c  ==============================
+========================================================================
 
-Implement a program that accepts as argument a "pathname", open the file
+A program that accepts as argument a "pathname", open the file
 and using a partition size of the file bytes of 80 bytes, create an 
 output file in which shall contain the following:
 
@@ -12,7 +14,9 @@ Block 2
 Failure to pass an argument to the program must use standard input as 
 input file.
 
+========================================================================
 =============================  task_1_a.c  =============================
+========================================================================
 
 Edit the file task_1.c so that once the writing in the output file and 
 before closing, we could indicate in its first line the number of labels
@@ -24,4 +28,15 @@ Block 1
 Block 2
 // the next 80 bytes
 
+========================================================================
+==============================  task_2.c  ==============================
+========================================================================
+
+A macro in C that implements the macro S_ISREG (mode) using the flags 
+for it <sys/stat.h> defined for the st_mode field of struct stat. 
+
+# define S_ISREG2 (mode) ...
+
+========================================================================
 ==============================  task_3.c  ==============================
+========================================================================
