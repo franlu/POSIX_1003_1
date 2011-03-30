@@ -48,7 +48,7 @@ the call umask.
 Secondly (after the files are created) a second program with the part of
 CHANGE OF PERMISSIONS to understand the change of permissions on the 
 permissions you currently have a file against an absolute setting
-permissions.
+permissions._
 
 ========================================================================
 ==============================  task_.c  ==============================
