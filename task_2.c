@@ -11,7 +11,7 @@ Working with system calls File System ''POSIX 2.10 compliant''
 #include<errno.h>
 #include<string.h>
 
-
+//#define S_ISREG(m)  ((m) & S_IFREG) 
 #define S_ISREG2(mode) ((mode & S_IFMT) == S_IFREG)
 
 
