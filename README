@@ -40,3 +40,16 @@ for it <sys/stat.h> defined for the st_mode field of struct stat.
 ========================================================================
 ==============================  task_3.c  ==============================
 ========================================================================
+
+This program is designed to supply to first create a program with the 
+FILE CREATION and do a ls-l to look at the permissions and understand 
+the call umask.
+
+Secondly (after the files are created) a second program with the part of
+CHANGE OF PERMISSIONS to understand the change of permissions on the 
+permissions you currently have a file against an absolute setting
+permissions.
+
+========================================================================
+==============================  task_.c  ==============================
+========================================================================
