@@ -51,5 +51,22 @@ permissions you currently have a file against an absolute setting
 permissions._
 
 ========================================================================
-==============================  task_.c  ==============================
+==============================  task_4.c  ==============================
 ========================================================================
+
+A program using system calls necessary to accept as input:
+ - An argument represents the 'pathname' of a directory.
+ - Another argument which is a 4-digit octal number (similar to that can
+   be used to change the permissions on the system call chmod)
+
+The program must use the octal number indicated in the second argument 
+to change the permissions of all files found in the directory indicated 
+in the first argument.
+
+The program should provide the standard output a line for each file in 
+the directory that is formed by:
+	<file_name>: <old_permits> <new_permits>
+
+If you can not change the permissions of a given file must specify the 
+following information on the stardard output:
+	<file_name>: <errno> <new_permits>
