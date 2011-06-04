@@ -1,5 +1,10 @@
-//productorFIFO.c
-//Productor que usa mecanismo de comunicacin FIFO.
+/*
+
+task_5_b.c
+Producer using FIFO communication mechanism
+    
+*/
+
 
 #include<sys/types.h>
 #include<sys/stat.h>
@@ -10,28 +15,28 @@
 #include<string.h>
 #include<errno.h>
 
-#define ARCHIVO_FIFO "ComunicacionFIFO"
+#define FILE_FIFO "ComunicacionFIFO"
 
 int main(int argc, char *argv[])
 {
  int fd;
 
-//Comprobación de uso correcto del programa.
+//Checking correct usage of the program.
 if(argc != 2)  {
-	printf("\nproductorFIFO: faltan argumentos (mensaje)");
-	printf("\nPruebe: productorFIFO <mensaje> donde <mensaje> es una cadena de caracteres.\n");
+	printf("\nproducerFIFO: need arguments (message)");
+	printf("\ntry: producerFIFO <message> where <message> is string.\n");
 	exit(-1);
 }
 
-//Intentar abrir para escritura el cauce FIFO.
-if( (fd=open(ARCHIVO_FIFO,O_WRONLY)) <0) {
-	perror("\nError en open");
+//open FIFO pipe to read.
+if( (fd=open(FILE_FIFO,O_WRONLY)) <0) {
+	perror("\nWrong open");
 	exit(-1);
 }
 
-//Escribir en el cauce FIFO el mensaje introducido como argumento. 
+//write FIFO pipe with message. 
 if( (write(fd,argv[1],strlen(argv[1])+1)) != strlen(argv[1])+1) {
-	perror("\nError al escribir en el FIFO");
+	perror("\nError at FIFO pipe when write");
 	exit(-1);
 }
 close(fd);
