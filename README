@@ -70,3 +70,14 @@ the directory that is formed by:
 If you can not change the permissions of a given file must specify the 
 following information on the stardard output:
 	<file_name>: <errno> <new_permits>
+
+========================================================================
+==============================  task_5.c  ==============================
+========================================================================
+
+task_5 have two files:
+task_5_a.c - consumer process run: consumerFIFO &
+task_5_b.c - producer process run: producerFIFO <message>
+
+Task_5 use a FIFO file, the consumer process read the message of producer
+process
