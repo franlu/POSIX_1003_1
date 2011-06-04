@@ -24,7 +24,7 @@ int leidos;
 umask(0);
 printf ("Return value for mknod: %d\n", mknod(FILE_FIFO,  S_IFIFO|0666, 0));
 
-//tambien vale: mkfifo(FILE_FIFO,0666);
+//mkfifo(FILE_FIFO,0666); is valid
 
 //Open pipe to read
 if( (fd=open(FILE_FIFO,O_RDWR)) <0) {
@@ -43,6 +43,7 @@ while (1) {
 	printf("\nMessage OK: %s\n",buffer);
 
 }
+
 return 0;
 
 }
