@@ -6,8 +6,6 @@ Test the program, then delete the comments (1) and try it again
     
 */
 
-//Prueba el programa tal y como está. Después, elimina los comentarios (1) y pruebalo de nuevo.
-
 #include<sys/types.h> //Primitive system data types for abstraction of implementation-dependent data types.
                       //POSIX Standard: 2.6 Primitive System Data Types <sys/types.h>
 #include<unistd.h>    //POSIX Standard: 2.10 Symbolic Constants         <unistd.h>
