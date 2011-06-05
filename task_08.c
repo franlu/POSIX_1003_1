@@ -1,6 +1,6 @@
 /*
 
-task_8.c
+task_08.c
 Working with system calls Process Subsystem POSIX 2.10
 A pipe example program and input-output standard redirection: "ls | sort"
 using the call dup2

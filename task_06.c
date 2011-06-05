@@ -1,6 +1,6 @@
 /*
 
-task_6.c
+task_06.c
 Working with system calls Process Subsystem POSIX 2.10
 A pipe example program
     

@@ -1,6 +1,6 @@
 /*
 
-task_8.c
+task_09.c
 Working with system calls Process Subsystem POSIX 2.10
 Test the program, then delete the comments (1) and try it again
     
