@@ -116,11 +116,18 @@ screen when the kernel is on / off the buffering mechanism.
 ==============================  task_09_a.c  ===========================
 ========================================================================
 
-Implement a program to launch five child processes. Each is identified
+A program to launch five child processes. Each is identified
 in the standard output, showing a message like I am the son PID. The
 parent process will simply have to wait for the completion of all their
 children and each time it detects the end of one of his children written
 to standard output a message like:
         My son just finished with <PID> 
         I only have <NUM_HIJOS> living children.
-	
+
+========================================================================
+==============================  task_09_b.c  ===========================
+========================================================================
+
+This program is a modification of the previous task in which the parent
+process waiting children first created in order odd (1st, 3rd, 5th) and
+then the children peer (2nd & 4th).
