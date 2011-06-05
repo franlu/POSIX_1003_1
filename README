@@ -86,7 +86,7 @@ process
 ==============================  task_6.c  ==============================
 ========================================================================
 
-A pipe example programa
+A pipe example program
 
 ========================================================================
 ==============================  task_7.c  ==============================
@@ -94,3 +94,12 @@ A pipe example programa
 
 A pipe example program and input-output standard redirection:
 "ls | sort"
+
+========================================================================
+==============================  task_8.c  ==============================
+========================================================================
+
+Working with system calls Process Subsystem POSIX 2.10
+A pipe example program and input-output standard redirection:
+"ls | sort"
+using the call dup2
