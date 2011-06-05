@@ -81,3 +81,9 @@ task_5_b.c - producer process run: producerFIFO <message>
 
 Task_5 use a FIFO file, the consumer process read the message of producer
 process
+
+========================================================================
+==============================  task_6.c  ==============================
+========================================================================
+
+A pipe example programa
