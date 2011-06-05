@@ -15,7 +15,7 @@ Test the program, then delete the comments (1) and try it again
 
 
 int global=6;
-char buf[]="Exit message\n";
+char buf[]="Testing the standard output\n";
 
 int main(int argc, char *argv[])
 {
@@ -30,7 +30,12 @@ if(write(STDOUT_FILENO,buf,sizeof(buf)+1) != sizeof(buf)+1) {
 //(1)   if(setvbuf(stdout,NULL,_IONBF,0)) {
 //(1)   perror("\nError at setvbuf call");
 //(1)   }
-printf("\nMessage prior to the execution of fork call");
+
+if(setvbuf(stdout,NULL,_IONBF,0)) {
+	perror("\nError at setvbuf call");
+}
+
+printf("\nBefore fork() call");
 
 if( (pid=fork())<0) {
 	perror("\nError at fork call");
@@ -39,7 +44,7 @@ if( (pid=fork())<0) {
 else if(pid==0) {  //child process run the program
 		global++;
 		var++;
-		  execlp("/bin/ls","ls","a", NULL);
+		  execlp("/bin/ls","ls","-a", NULL);
 	} else  //father process run the program
 		sleep(1);
 		
