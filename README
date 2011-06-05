@@ -1,5 +1,5 @@
 ========================================================================
-==============================  task_01.c  ==============================
+==============================  task_01.c  =============================
 ========================================================================
 
 A program that accepts as argument a "pathname", open the file
@@ -15,7 +15,7 @@ Failure to pass an argument to the program must use standard input as
 input file.
 
 ========================================================================
-=============================  task_01_a.c  =============================
+=============================  task_01_a.c  ============================
 ========================================================================
 
 Edit the file task_1.c so that once the writing in the output file and 
@@ -29,7 +29,7 @@ Block 2
 // the next 80 bytes
 
 ========================================================================
-==============================  task_02.c  ==============================
+==============================  task_02.c  =============================
 ========================================================================
 
 A macro in C that implements the macro S_ISREG (mode) using the flags 
@@ -38,7 +38,7 @@ for it <sys/stat.h> defined for the st_mode field of struct stat.
 # define S_ISREG2 (mode) ...
 
 ========================================================================
-==============================  task_03.c  ==============================
+==============================  task_03.c  =============================
 ========================================================================
 
 This program is designed to supply to first create a program with the 
@@ -51,7 +51,7 @@ permissions you currently have a file against an absolute setting
 permissions._
 
 ========================================================================
-==============================  task_04.c  ==============================
+==============================  task_04.c  =============================
 ========================================================================
 
 A program using system calls necessary to accept as input:
@@ -72,7 +72,7 @@ following information on the stardard output:
 	<file_name>: <errno> <new_permits>
 
 ========================================================================
-==============================  task_05.c  ==============================
+==============================  task_05.c  =============================
 ========================================================================
 
 task_5 have two files:
@@ -83,20 +83,20 @@ Task_5 use a FIFO file, the consumer process read the message of producer
 process
 
 ========================================================================
-==============================  task_06.c  ==============================
+==============================  task_06.c  =============================
 ========================================================================
 
 A pipe example program
 
 ========================================================================
-==============================  task_07.c  ==============================
+==============================  task_07.c  =============================
 ========================================================================
 
 A pipe example program and input-output standard redirection:
 "ls | sort"
 
 ========================================================================
-==============================  task_08.c  ==============================
+==============================  task_08.c  =============================
 ========================================================================
 
 Working with system calls Process Subsystem POSIX 2.10
@@ -105,9 +105,22 @@ A pipe example program and input-output standard redirection:
 using the call dup2
 
 ========================================================================
-==============================  task_09.c  ==============================
+==============================  task_09.c  =============================
 ========================================================================
 
 Test the program, then delete the comments (1) and try it again.Try to
 understand what happens to the variables and especially with messages on
 screen when the kernel is on / off the buffering mechanism.
+
+========================================================================
+==============================  task_09_a.c  ===========================
+========================================================================
+
+Implement a program to launch five child processes. Each is identified
+in the standard output, showing a message like I am the son PID. The
+parent process will simply have to wait for the completion of all their
+children and each time it detects the end of one of his children written
+to standard output a message like:
+        My son just finished with <PID> 
+        I only have <NUM_HIJOS> living children.
+	
