@@ -103,3 +103,12 @@ Working with system calls Process Subsystem POSIX 2.10
 A pipe example program and input-output standard redirection:
 "ls | sort"
 using the call dup2
+
+
+========================================================================
+==============================  task_9.c  ==============================
+========================================================================
+
+Test the program, then delete the comments (1) and try it again.Try to
+understand what happens to the variables and especially with messages on
+screen when the kernel is on / off the buffering mechanism.
