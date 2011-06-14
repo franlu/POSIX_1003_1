@@ -20,16 +20,16 @@ int num_hijos = 3;
 int i, estado;
 pid_t pid;
   
-for(i=0; i<num_hijos; i++)
+for(i=0; i<num_hijos; i++){
     if((pid = fork())<0){
       perror("Error fork\n");
       exit(-1);
     }
-    
-if(pid==0){
+    if(pid==0){
 	printf("I am the son %i\n", getpid());
-	//exit(0);
+	exit(0);
     }
+}    
 
 for(i=num_hijos-1; i>=0; i--){
     pid = wait(&estado);
